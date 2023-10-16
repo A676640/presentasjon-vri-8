@@ -200,10 +200,13 @@ public class KortSamling {
 	 * @return tabell av kort som er i samlingen, der kort skal ha samme rekkefølge
 	 *         som i kortsamlinga.
 	 */
-	public Kort[] getAllekort() {
-		
-		
-	
-	}
+
+    public Kort[] getAllekort() {
+        Kort[] alleKort = new Kort[antall];
+        for (int i = 0; i < antall; i++) {
+            alleKort[i] = samling[i];
+        }
+        return alleKort;
+    }
 	
 }
