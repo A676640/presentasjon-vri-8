@@ -92,11 +92,8 @@ public class Bord {
 	 */
 	public int antallBunkeTil() {
 		
-		// TODO - START
+		return bunkeTil.getAntalKort();
 		
-		throw new UnsupportedOperationException(TODO.method());
-
-		// TODO - END
 	}
 	
 	/**
