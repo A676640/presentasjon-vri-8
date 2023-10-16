@@ -56,8 +56,7 @@ public class Bord {
 	public boolean bunketilTom() {
 		
 		// TODO - START
-				
-		throw new UnsupportedOperationException(TODO.method());
+		return bunkeTil.erTom();
 
 		// TODO - END
 	}
