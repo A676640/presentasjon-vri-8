@@ -35,6 +35,7 @@ public abstract class Spiller implements ISpiller {
 		
 		spiller = Spillere.INGEN;
 		antalltrekk = 0;
+		hand = new KortSamling();
 	}
 
 	/**
