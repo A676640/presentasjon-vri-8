@@ -47,7 +47,7 @@ public class KortSamling {
 	 * @return antall kort i samlinga.
 	 */
 	public int getAntalKort() {
-		return antall;
+		return getAllekort().length;
 	}
 	
 	/**
@@ -100,7 +100,7 @@ public class KortSamling {
 			}
 		
 		
-		for(int i = 1; i < Regler.MAKS_KORT_FARGE; i++) {
+		for(int i = 1; i <= Regler.MAKS_KORT_FARGE; i++) {
 			Kort x = new Kort(kortFarge, i);
 			samling[i-1 + Regler.MAKS_KORT_FARGE * j] = x;
 		}}
