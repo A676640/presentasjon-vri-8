@@ -58,42 +58,29 @@ public abstract class Spiller implements ISpiller {
 
 	public KortSamling getHand() {
 		
-		// TODO - START
-		
-		throw new UnsupportedOperationException(TODO.method());
-
-		// TODO - END
+		return hand;
 	}
 
 	public int getAntallTrekk() {
 		
-		// TODO - START
-		
-		throw new UnsupportedOperationException(TODO.method());
-
-		// TODO - END
+		return antalltrekk;
 	}
 
 	public Spillere hvem() {
 		
-		return spiller.valueOf(null);
+		return spiller;
 		
 	}
 
 	public void setAntallTrekk(int t) {
 		
-		// TODO - START
+		antalltrekk = t;
 		
-		throw new UnsupportedOperationException(TODO.method());
-		// TODO - END
 	}
 
 	public boolean erFerdig() {
 		
-		// TODO - START
 		
-		throw new UnsupportedOperationException(TODO.method());
-		// TODO - END
 		
 	}
 
