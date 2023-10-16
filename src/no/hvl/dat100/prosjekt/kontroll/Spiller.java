@@ -80,13 +80,13 @@ public abstract class Spiller implements ISpiller {
 
 	public boolean erFerdig() {
 		
-		
+		return hand.erTom();
 		
 	}
 
 	public void leggTilKort(Kort kort) {
 		
-		
+		hand.leggTil(kort);
 	}
 
 	public void fjernKort(Kort kort) {
