@@ -101,12 +101,8 @@ public class Bord {
 	 * billedsiden opp, men det trenger ikke gruppen tenke på).
 	 */
 	public void vendOversteFraBunke() {
-		
-		// TODO - START
-		
-		throw new UnsupportedOperationException(TODO.method());
-		// TODO - END
-		
+		Kort siste = bunkeFra.taSiste();
+		bunkeTil.leggTil(siste);
 	}
 		
 	/**
