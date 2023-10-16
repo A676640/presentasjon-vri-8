@@ -145,7 +145,7 @@ public class KortSamling {
 	public Kort taSiste() {
 		
 		// TODO - START
-		for(int i = samling.length - 1; i+1>0; i--) {
+		for(int i = samling.length - 1; i>=0; i--) {
 			if(samling[i] != null) {
 				Kort sisteKort = samling[i];
 				samling[i] = null;
@@ -205,11 +205,32 @@ public class KortSamling {
 	 */
 
     public Kort[] getAllekort() {
-        Kort[] alleKort = new Kort[antall];
+    	
+    	int  mengdeKort = 0;
+    	for (Kort kort:samling) {
+    		if (kort != null) {
+    			mengdeKort++;
+    		}
+    	}
+    	int j = 0;
+    	Kort[] alleKort = new Kort[mengdeKort];
+    	for (int i = 0; i < samling.length; i++) {
+    		if(samling[i] != null) {
+    			alleKort[j] = samling[i];
+    			j++;
+    		}
+    	}
+    	return alleKort;
+    	
+    	
+       /* Kort[] alleKort = new Kort[antall];
         for (int i = 0; i < antall; i++) {
             alleKort[i] = samling[i];
         }
-        return alleKort;
+        return alleKort;*/
     }
 	
+
 }
+
+
