@@ -49,12 +49,9 @@ public class SydSpiller extends Spiller {
 		// Gå igjennom kort å finn ut hvilke som kan spilles
 		for (Kort k : hand) {
 			if (Regler.kanLeggeNed(k, topp)) {
-				if (Regler.atter(k)) {
-					attere.leggTil(k);
-				} else {
+				
 					lovlige.leggTil(k);
 				}
-			}
 		}
 
 		Kort spill = null;
@@ -70,9 +67,7 @@ public class SydSpiller extends Spiller {
 		
 		if (spillFra != null) {
 			
-			Random r = new Random();
-			int p = r.nextInt(spillFra.length);
-			spill = spillFra[p];
+			spill = spillFra[0];
 			handling = new Handling(HandlingsType.LEGGNED, spill);
 			// setAntallTrekk(0);
 			
