@@ -137,12 +137,19 @@ public class Bord {
 	public void snuTilBunken() {
 
 		// TODO - START
-		Kort siste = bunkeFra.taSiste();
+		Kort øversteKort = bunkeTil.taSiste();
 		for(int i = 0; i < bunkeTil.getAntalKort(); i++) {
 			bunkeFra.getSamling()[i] = bunkeTil.getAllekort()[i];
 		}
 		bunkeTil.fjernAlle();
-		bunkeTil.leggTil(siste);
+		for(int i = 0; i < bunkeTil.getAntalKort(); i++) {
+			System.out.println(bunkeTil.getSamling()[i]);
+		}
+		bunkeTil.leggTil(øversteKort);
+		for(int i = 0; i < bunkeTil.getAntalKort(); i++) {
+			System.out.println(bunkeTil.getSamling()[i]);
+		}
+		System.out.print(øversteKort);
 		KortUtils.sorter(bunkeFra);
 		// TODO - END
 	}

@@ -86,36 +86,21 @@ public abstract class Spiller implements ISpiller {
 
 	public void leggTilKort(Kort kort) {
 		
-		// TODO - START
-		
-		throw new UnsupportedOperationException(TODO.method());
-		// TODO - END
 		
 	}
 
 	public void fjernKort(Kort kort) {
-		
-		// TODO - START
-		
-		throw new UnsupportedOperationException(TODO.method());
-		// TODO - END
+		hand.fjern(kort);
 		
 	}
 
 	public void fjernAlleKort() {
-		
-		// TODO - START
-		
-		throw new UnsupportedOperationException(TODO.method());
-		// TODO - END
+		hand.fjernAlle();
 	}
 
 	public void trekker(Kort kort) {
-		
-		// TODO - START
-		
-		throw new UnsupportedOperationException(TODO.method());
-		// TODO - END
+		leggTilKort(kort);
+		antalltrekk++;
 		
 	}
 }

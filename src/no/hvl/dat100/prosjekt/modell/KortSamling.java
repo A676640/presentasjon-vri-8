@@ -23,7 +23,6 @@ public class KortSamling {
 	 */
 	public KortSamling() {
 		samling = new Kort[MAKS_KORT];
-		antall = 0;
 	}
 
 	/**
@@ -150,7 +149,7 @@ public class KortSamling {
 	public Kort taSiste() {
 		
 		// TODO - START
-		for(int i = samling.length - 1; i>=0; i--) {
+		for(int i = MAKS_KORT - 1; i+1>0; i--) {
 			if(samling[i] != null) {
 				Kort sisteKort = samling[i];
 				samling[i] = null;
