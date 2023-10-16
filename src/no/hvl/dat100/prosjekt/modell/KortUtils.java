@@ -31,10 +31,16 @@ public class KortUtils {
 	 */
 	public static void stokk(KortSamling samling) {
 		
-		// TODO - START
+		Random random = new Random();
 		
-		throw new UnsupportedOperationException(TODO.method());
-		// TODO - END
+		for (int i = 0; i < samling.getSamling().length; i++) {
+			int randomInt = random.nextInt(samling.getSamling().length);
+			Kort x = samling.getSamling()[i];
+			Kort y = samling.getSamling()[randomInt];
+			samling.getSamling()[i] = y;
+			samling.getSamling()[randomInt] = x;
+		}
+		
 	}
 	
 }
