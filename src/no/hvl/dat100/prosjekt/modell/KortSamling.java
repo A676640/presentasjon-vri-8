@@ -88,16 +88,19 @@ public class KortSamling {
 			switch(j) {
 			case(0):
 				kortFarge = Kortfarge.Klover;
+			break;
 			case(1):
 				kortFarge = Kortfarge.Hjerter;
+			break;
 			case(2):
 				kortFarge = Kortfarge.Ruter;
+			break;
 			default:
 				kortFarge = Kortfarge.Spar;	
 			}
 		
 		
-		for(int i = 0; i < Regler.MAKS_KORT_FARGE; i++) {
+		for(int i = 1; i < Regler.MAKS_KORT_FARGE; i++) {
 			Kort x = new Kort(kortFarge, i);
 			samling[i-1 + Regler.MAKS_KORT_FARGE * j] = x;
 		}}
