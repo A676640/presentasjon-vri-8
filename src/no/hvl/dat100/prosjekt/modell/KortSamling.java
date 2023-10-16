@@ -71,8 +71,12 @@ public class KortSamling {
 	 *            er kortet som skal leggast til.
 	 */
 	public void leggTil(Kort kort) {
-		samling[antall] = kort;
-		antall++;
+		for(int i = 0; i<samling.length; i++) {
+			if(samling[i] == null) {
+				samling[i] = kort;
+				break;
+			}
+		}
 		
 	}
 	
@@ -166,15 +170,16 @@ public class KortSamling {
 	 * @return true om kortet finst i samlinga, false ellers.
 	 */
 	public boolean har(Kort kort) {
-		
-		for (int i = 0; i < samling.length; i++) {
-			if (kort == samling[i]) {
-				return true;
-			}
+		if(kort!=null) {
+			for(int i = 0; i<getAntalKort();i++) {
+				if(getAllekort()[i].getFarge() == kort.getFarge() && getAllekort()[i].getVerdi()==kort.getVerdi()) {
+					return true;
+				}
 				
-		}return false;
-		
-	}
+			}
+			}
+		return false;
+		}
 
 	/**
 	 * Fjernar et kort frå samlinga. Dersom kortet ikke finnest i samlinga,
