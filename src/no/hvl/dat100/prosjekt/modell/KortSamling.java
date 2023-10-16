@@ -56,7 +56,7 @@ public class KortSamling {
 	 * @return true om samlinga er tom, false ellers.
 	 */
 	public boolean erTom() {
-	    for (int i = 0; i < antall; i++) {
+	    for (int i = 0; i < samling.length; i++) {
 	        if (samling[i] != null) {
 	            return false; 
 	        }
@@ -192,14 +192,13 @@ public class KortSamling {
 	 */
 			 
 	public boolean fjern(Kort kort) {
-		
+		if(kort != null) {
 		for (int i = 0; i < samling.length; i++) {
-			
 			if (kort == samling[i]) {
 				samling[i] = null;
 				return true;
 		}
-			}
+			}}
 		return false;
 	}
 
