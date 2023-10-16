@@ -33,10 +33,9 @@ public abstract class Spiller implements ISpiller {
 	 */
 	public Spiller() {
 		
-		// TODO - START
-		
-		throw new UnsupportedOperationException(TODO.constructor("Spiller"));
-		// TODO - END
+		spiller = Spillere.INGEN;
+		antalltrekk = 0;
+		hand = new KortSamling();
 	}
 
 	/**
@@ -48,19 +47,13 @@ public abstract class Spiller implements ISpiller {
 	 */
 	public Spiller(Spillere spiller) {
 		
-		// TODO - START
-
-		throw new UnsupportedOperationException(TODO.constructor("Spiller"));
-		// TODO - END
+		this.spiller = spiller;
+		
 	}
 
 	public int getAntallKort() {
 		
-		// TODO - START
-		
-		throw new UnsupportedOperationException(TODO.method());
-
-		// TODO - END
+		return hand.getAntalKort();
 	}
 
 	public KortSamling getHand() {
@@ -83,11 +76,7 @@ public abstract class Spiller implements ISpiller {
 
 	public Spillere hvem() {
 		
-		// TODO - START
-		
-		throw new UnsupportedOperationException(TODO.method());
-
-		// TODO - END
+		return spiller.valueOf(null);
 		
 	}
 
