@@ -21,11 +21,9 @@ public class Bord {
 	 * Alle kortene legges til fra-bunken. 
 	 */
 	public Bord() {
-		
-		// TODO - START
-		
-		throw new UnsupportedOperationException(TODO.constructor("Bord"));
-		// TODO - END
+		bunkeFra = new KortSamling();
+		bunkeTil = new KortSamling();
+		bunkeFra.leggTilAlle();
 	}
 	
 	/**
