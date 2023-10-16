@@ -58,10 +58,10 @@ public class KortSamling {
 	public boolean erTom() {
 	    for (int i = 0; i < antall; i++) {
 	        if (samling[i] != null) {
-	            return false; // If a non-null card is found, the collection is not empty
+	            return false; 
 	        }
 	    }
-	    return true; // If the loop completes without finding a non-null card, the collection is empty
+	    return true; 
 	}
 
 	/**
@@ -82,11 +82,27 @@ public class KortSamling {
 	 */
 	public void leggTilAlle() {
 		
+		Kortfarge kortFarge;
+		
+		for(int j = 0; j<4; j++) {
+			switch(j) {
+			case(0):
+				kortFarge = Kortfarge.Klover;
+			case(1):
+				kortFarge = Kortfarge.Hjerter;
+			case(2):
+				kortFarge = Kortfarge.Ruter;
+			default:
+				kortFarge = Kortfarge.Spar;	
+			}
+		
+		
+		for(int i = 0; i < Regler.MAKS_KORT_FARGE; i++) {
+			Kort x = new Kort(kortFarge, i);
+			samling[i-1 + Regler.MAKS_KORT_FARGE * j] = x;
+		}}
 		// TODO - START
 		// Husk: bruk Regler.MAKS_KORT_FARGE for å få antall kort per farge
-		
-		throw new UnsupportedOperationException(TODO.method());
-		// TODO - END
 	}
 
 	/**
@@ -125,9 +141,15 @@ public class KortSamling {
 	public Kort taSiste() {
 		
 		// TODO - START
-		
-		throw new UnsupportedOperationException(TODO.method());
-		
+		for(int i = samling.length - 1; i+1>0; i--) {
+			if(samling[i] != null) {
+				Kort sisteKort = samling[i];
+				samling[i] = null;
+				return sisteKort;
+			}
+			
+		}
+		return null;
 		// TODO - END
 	}
 	
