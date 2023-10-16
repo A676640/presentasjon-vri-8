@@ -2,6 +2,7 @@ package no.hvl.dat100.prosjekt.modell;
 
 import no.hvl.dat100.prosjekt.TODO;
 import no.hvl.dat100.prosjekt.kontroll.dommer.Regler;
+import no.hvl.dat100.varelager.Vare;
 
 /**
  * Struktur for å lagre ei samling kort. Kan lagre hele kortstokken. Det finnes
@@ -21,11 +22,8 @@ public class KortSamling {
 	 * Oppretter en tom Kortsamling med plass til MAKS_KORT (hele kortstokken).
 	 */
 	public KortSamling() {
-		
-		// TODO - START
-		
-		throw new UnsupportedOperationException(TODO.constructor("KortSamling"));
-		// TODO - END
+		samling = new Kort[MAKS_KORT];
+		antall = 0;
 	}
 
 	/**
@@ -49,12 +47,7 @@ public class KortSamling {
 	 * @return antall kort i samlinga.
 	 */
 	public int getAntalKort() {
-		
-		// TODO - START
-		
-		throw new UnsupportedOperationException(TODO.method());
-		
-		// TODO - END
+		return antall;
 	}
 	
 	/**
@@ -63,12 +56,12 @@ public class KortSamling {
 	 * @return true om samlinga er tom, false ellers.
 	 */
 	public boolean erTom() {
-		
-		// TODO - START
-				
-		throw new UnsupportedOperationException(TODO.method());
-		
-		// TODO - END
+	    for (int i = 0; i < antall; i++) {
+	        if (samling[i] != null) {
+	            return false; // If a non-null card is found, the collection is not empty
+	        }
+	    }
+	    return true; // If the loop completes without finding a non-null card, the collection is empty
 	}
 
 	/**
@@ -78,11 +71,8 @@ public class KortSamling {
 	 *            er kortet som skal leggast til.
 	 */
 	public void leggTil(Kort kort) {
-		
-		// TODO - START
-		
-		throw new UnsupportedOperationException(TODO.method());
-		// TODO - END
+		samling[antall] = kort;
+		antall++;
 		
 	}
 	
