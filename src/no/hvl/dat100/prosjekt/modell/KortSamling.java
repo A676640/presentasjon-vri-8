@@ -103,7 +103,8 @@ public class KortSamling {
 		for(int i = 1; i < Regler.MAKS_KORT_FARGE; i++) {
 			Kort x = new Kort(kortFarge, i);
 			samling[i-1 + Regler.MAKS_KORT_FARGE * j] = x;
-		}}
+		}
+		}
 		// TODO - START
 		// Husk: bruk Regler.MAKS_KORT_FARGE for å få antall kort per farge
 	}
