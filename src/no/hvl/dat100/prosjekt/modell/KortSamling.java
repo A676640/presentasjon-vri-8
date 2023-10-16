@@ -2,7 +2,7 @@ package no.hvl.dat100.prosjekt.modell;
 
 import no.hvl.dat100.prosjekt.TODO;
 import no.hvl.dat100.prosjekt.kontroll.dommer.Regler;
-import no.hvl.dat100.varelager.Vare;
+
 
 /**
  * Struktur for å lagre ei samling kort. Kan lagre hele kortstokken. Det finnes
