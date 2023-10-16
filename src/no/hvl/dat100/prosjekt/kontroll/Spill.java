@@ -159,11 +159,13 @@ public class Spill {
 	 */
 	public boolean leggnedKort(ISpiller spiller, Kort kort) {
 		
-		// TODO - START
-		
-		throw new UnsupportedOperationException(TODO.method());
-
-		// TODO - END
+			if (spiller.getHand().har(kort) == false) {
+				return false;
+			}
+			spiller.fjernKort(kort);
+			bord.leggNedBunkeTil(kort);
+			spiller.setAntallTrekk(0);
+			return true;
 	}
 
 	/**
@@ -175,11 +177,8 @@ public class Spill {
 	 */
 	public void forbiSpiller(ISpiller spiller) {
 		
-		// TODO - START
+		spiller.setAntallTrekk(0);
 		
-		throw new UnsupportedOperationException(TODO.method());
-	
-		// TODO - END
 	}
 
 	/**
@@ -202,8 +201,7 @@ public class Spill {
 		// om noen andre private metoder i klassen kan brukes
 		// til å implementere denne metoden
 				
-		throw new UnsupportedOperationException(TODO.method());
-
+		
 		// TODO - END
 	}
 
