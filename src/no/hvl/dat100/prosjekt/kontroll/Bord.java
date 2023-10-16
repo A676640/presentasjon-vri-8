@@ -117,11 +117,8 @@ public class Bord {
 	
 	public Kort taOversteFraBunke() {
 		
-		// TODO - START
+		return bunkeFra.taSiste();
 		
-		throw new UnsupportedOperationException(TODO.method());
-
-		// TODO - END
 	}
 	
 	/**
@@ -132,11 +129,7 @@ public class Bord {
 	 */
 	public Kort seOversteBunkeTil() {
 		
-		// TODO - START
-		
-		throw new UnsupportedOperationException(TODO.method());
-
-		// TODO - END
+		return bunkeTil.seSiste();
 	}
 	
 	/**
@@ -162,10 +155,7 @@ public class Bord {
 	 */
 	public void leggNedBunkeTil(Kort k) {
 		
-		// TODO - START
-		
-		throw new UnsupportedOperationException(TODO.method());
-		// TODO - END
+		bunkeTil.leggTil(k);
 				
 	}
 }
