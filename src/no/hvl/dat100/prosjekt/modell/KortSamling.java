@@ -94,10 +94,10 @@ public class KortSamling {
 	 */
 	public void fjernAlle() {
 		
-		// TODO - START
+		for (int i = 0; i < samling.length; i++) {
+			samling[i]=null;
+		}
 		
-		throw new UnsupportedOperationException(TODO.method());
-		// TODO - END
 	}
 	
 	/**
@@ -108,11 +108,12 @@ public class KortSamling {
 	 */
 	public Kort seSiste() {
 		
-		// TODO - START
-		
-		throw new UnsupportedOperationException(TODO.method());
-
-		// TODO - END
+		for (int i = samling.length - 1; i >= 0; i--) {
+			if (samling[i] != null) {
+				return samling[i];
+			}
+		}
+			return null;
 		
 	}
 
