@@ -16,11 +16,18 @@ public class KortUtils {
 	 */
 	
 	public static void sorter(KortSamling samling) {
-		
-		// TODO - START
-		
-		throw new UnsupportedOperationException(TODO.method());
-		// TODO - END
+		boolean flagg = true;
+		while(flagg) {
+			flagg = false;
+			for(int i = 1; i < samling.getAntalKort(); i++) {
+				if(samling.getSamling()[i-1].compareTo(samling.getSamling()[i]) > 0) {
+					Kort x = samling.getSamling()[i-1];
+					Kort y = samling.getSamling()[i];
+					samling.getSamling()[i-1] = y;
+					samling.getSamling()[i] = x;
+				}
+			}
+		}
 	}
 	
 	/**
