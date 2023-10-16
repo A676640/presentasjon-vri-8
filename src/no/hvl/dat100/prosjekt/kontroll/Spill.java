@@ -6,6 +6,7 @@ import no.hvl.dat100.prosjekt.modell.KortSamling;
 import no.hvl.dat100.prosjekt.TODO;
 import no.hvl.dat100.prosjekt.kontroll.dommer.Regler;
 import no.hvl.dat100.prosjekt.kontroll.spill.Handling;
+import no.hvl.dat100.prosjekt.kontroll.spill.HandlingsType;
 import no.hvl.dat100.prosjekt.kontroll.spill.Spillere;
 import no.hvl.dat100.prosjekt.modell.Kort;
 import no.hvl.dat100.prosjekt.modell.KortUtils;
@@ -89,7 +90,10 @@ public class Spill {
 	public void start() {
 		
 		// TODO - START
-		
+		KortUtils.stokk(bord.getBunkeFra());
+		delutKort();
+		Kort x = bord.taOversteFraBunke();
+		bord.getBunkeTil().leggTil(x);
 		
 		// TODO - END
 	}
@@ -145,11 +149,7 @@ public class Spill {
 	 */
 	public Handling nesteHandling(ISpiller spiller) {
 		
-		// TODO - START
-		// Hint: se på hvilke metoder som er tilgjengelig på en spiller
-		throw new UnsupportedOperationException(TODO.method());
-
-		// TODO - END
+		return spiller.nesteHandling(bord.seOversteBunkeTil());
 		
 	}
 
@@ -209,8 +209,17 @@ public class Spill {
 		// om noen andre private metoder i klassen kan brukes
 		// til å implementere denne metoden
 				
-		
-		// TODO - END
+		if(handling.getType() == HandlingsType.FORBI) {
+			forbiSpiller(spiller);
+		}
+		else if (handling.getType() == HandlingsType.LEGGNED) {
+			kort = handling.getKort();
+			leggnedKort(spiller,kort);
+		}
+		else if (handling.getType() == HandlingsType.TREKK) {
+			kort = trekkFraBunke(spiller);
+		}
+		return kort;
 	}
 
 }
