@@ -69,11 +69,7 @@ public class Bord {
 	 */
 	public boolean bunkefraTom() {
 		
-		// TODO - START
-		
-		throw new UnsupportedOperationException(TODO.method());
-	
-		// TODO - END
+		return bunkeFra.erTom();
 		
 	}
 	
