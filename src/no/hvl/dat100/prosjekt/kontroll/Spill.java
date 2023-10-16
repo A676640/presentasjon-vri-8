@@ -20,7 +20,6 @@ public class Spill {
 
 	private ISpiller nord;
 	private ISpiller syd;
-	
 	private Bord bord;
 	
 	// antall kort som skal deles ut til hver spiller ved start
@@ -28,10 +27,9 @@ public class Spill {
 	
 	public Spill() {
 		
-		// TODO - START
-		
-		throw new UnsupportedOperationException(TODO.constructor("Spill"));
-		// TODO - END
+		nord = new NordSpiller(Spillere.NORD);
+		syd = new SydSpiller(Spillere.SYD);
+		bord = new Bord();
 		
 	}
 	
@@ -44,7 +42,7 @@ public class Spill {
 		
 		// TODO - START
 		
-		throw new UnsupportedOperationException(TODO.method());
+		return bord;
 
 		// TODO - END
 		
@@ -59,7 +57,7 @@ public class Spill {
 		
 		// TODO - START
 		
-		throw new UnsupportedOperationException(TODO.method());
+		return syd;
 
 		// TODO - END
 		
@@ -74,7 +72,7 @@ public class Spill {
 		
 		// TODO - START
 
-		throw new UnsupportedOperationException(TODO.method());
+		return nord;
 
 		// TODO - END
 	}
@@ -92,7 +90,7 @@ public class Spill {
 		
 		// TODO - START
 		
-		throw new UnsupportedOperationException(TODO.method());
+		
 		// TODO - END
 	}
 
@@ -104,7 +102,10 @@ public class Spill {
 
 		// TODO - START
 		
-		throw new UnsupportedOperationException(TODO.method());
+		for(int i = 0; i < ANTALL_KORT_START; i++) {
+			syd.leggTilKort(bord.taOversteFraBunke());
+			nord.leggTilKort(bord.taOversteFraBunke());
+		}
 		// TODO - END
 	}
 
@@ -122,7 +123,14 @@ public class Spill {
 
 		// TODO - START
 			
-		throw new UnsupportedOperationException(TODO.method());
+		if(bord.bunkefraTom()) {
+			bord.snuTilBunken();
+		}
+		Kort øverst = bord.taOversteFraBunke();
+		spiller.leggTilKort(øverst);
+		int trekk = spiller.getAntallTrekk() + 1;
+		spiller.setAntallTrekk(trekk);
+		return øverst;
 
 		// TODO - END
 	}
