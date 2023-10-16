@@ -80,8 +80,7 @@ public class Bord {
 	public int antallBunkeFra() {
 		
 		// TODO - START
-		
-		throw new UnsupportedOperationException(TODO.method());
+		return bunkeFra.getAntalKort();
 
 		// TODO - END
 	}
